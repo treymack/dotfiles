@@ -43,5 +43,7 @@
     "vim.handleKeys": {
         "<C-a>": false,
         "<C-f>": false
-    }
+    },
+    "terminal.integrated.fontFamily": "MesloLGM NF",
+    "terminal.integrated.fontSize": 12
 }
