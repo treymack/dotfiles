@@ -27,10 +27,6 @@
     ],
     "vim.normalModeKeyBindingsNonRecursive": [
         {
-        "before": ["<leader>", "w"],
-        "after": ["d", "d"]
-        },
-        {
         "before": [ "leader", "<Enter>"],
         "commands": [":nohl"]
         },
