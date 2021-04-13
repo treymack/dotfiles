@@ -8,7 +8,7 @@
         }
     ],
     "editor.minimap.enabled": false,
-    "terminal.integrated.shell.windows": "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "terminal.integrated.shell.windows": "C:\\windows\\System32\\wsl.exe",
 
     "vim.easymotion": true,
     "vim.incsearch": true,
@@ -45,5 +45,7 @@
         "<C-f>": false
     },
     "terminal.integrated.fontFamily": "MesloLGM NF",
-    "terminal.integrated.fontSize": 12
+    "editor.fontFamily": "MesloLGM NF",
+    "workbench.editor.enablePreview": false,
+    "terminal.external.windowsExec": "C:\\Users\\txm191\\AppData\\Local\\Microsoft\\WindowsApps\\ubuntu2004.exe"
 }

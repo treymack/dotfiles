@@ -1,0 +1,45 @@
+[include]
+    path = ~/.gitconfig.local
+[credential]
+	helper = manager-core
+[alias]
+    count = !git shortlog -sn
+    hist = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+    co = checkout
+    br = branch
+    ci = commit
+    st = status
+    cob = checkout -b
+    gimme = pull --ff-only --prune
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+    ui = true
+[core]
+    excludesfile = ~/.gitignore
+    editor = vim
+    whitespace = cr-at-eol
+    autocrlf = true
+[apply]
+    whitespace = nowarn
+[mergetool]
+    prompt = false
+    keepBackup = false
+    keepTemporaries = false
+[merge]
+    tool = winmerge
+[mergetool "winmerge"]
+    name = WinMerge
+    trustExitCode = true
+    cmd = "~/scoop/apps/winmerge/current/WinMergeU.exe" -u -e -dl \"Local\" -dr \"Remote\" $LOCAL $REMOTE $MERGED
+[difftool]
+    prompt = false
+[diff]
+    tool = winmerge
+[difftool "winmerge"]
+    name = WinMerge
+    trustExitCode = true
+    cmd = "~/scoop/apps/winmerge/current/WinMergeU.exe" -u -e $LOCAL $REMOTE
+[help]
+    autocorrect = 1
