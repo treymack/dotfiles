@@ -17,3 +17,28 @@ function fliptable { Write-Output '（╯°□°）╯ ┻━┻'; } # Flip a ta
 
 Import-Module oh-my-posh
 Set-PoshPrompt -Theme agnoster
+
+function gitbash { & 'C:\Program Files\Git\bin\bash.exe' }
+
+function touch
+{
+    $file = $args[0]
+    if($file -eq $null) {
+        throw "No filename supplied"
+    }
+
+    if(Test-Path $file)
+    {
+        (Get-ChildItem $file).LastWriteTime = Get-Date
+    }
+    else
+    {
+        echo $null > $file
+    }
+}
+
+$localProfile = (Join-Path '~' 'Documents\WindowsPowerShell\Microsoft.PowerShell_profile.local.ps1')
+if (Test-Path $localProfile) {
+    . $localProfile
+}
+
