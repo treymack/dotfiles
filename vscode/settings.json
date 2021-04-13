@@ -27,10 +27,6 @@
     ],
     "vim.normalModeKeyBindingsNonRecursive": [
         {
-        "before": ["<leader>", "w"],
-        "after": ["d", "d"]
-        },
-        {
         "before": [ "leader", "<Enter>"],
         "commands": [":nohl"]
         },
@@ -45,7 +41,7 @@
         "<C-f>": false
     },
     "terminal.integrated.fontFamily": "MesloLGM NF",
+    "terminal.integrated.fontSize": 12,
     "editor.fontFamily": "MesloLGM NF",
-    "workbench.editor.enablePreview": false,
-    "terminal.external.windowsExec": "C:\\Users\\txm191\\AppData\\Local\\Microsoft\\WindowsApps\\ubuntu2004.exe"
+    "workbench.editor.enablePreview": false
 }
