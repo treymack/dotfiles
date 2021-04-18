@@ -1,19 +1,15 @@
 {
-    "mssql.connections": [
-        {
-            "server": "{{put-server-name-here}}",
-            "database": "{{put-database-name-here}}",
-            "user": "{{put-username-here}}",
-            "password": "{{put-password-here}}"
-        }
-    ],
+    "editor.fontFamily": "MesloLGM NF",
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "modifications",
+    "editor.formatOnPaste": true,
     "editor.minimap.enabled": false,
-    "terminal.integrated.shell.windows": "C:\\windows\\System32\\wsl.exe",
 
     "vim.easymotion": true,
     "vim.incsearch": true,
     "vim.useSystemClipboard": true,
     "vim.hlsearch": true,
+    "vim.disableExtension": false,
     "vim.highlightedyank.enable": true,
     "vim.insertModeKeyBindings": [
         {
@@ -27,21 +23,37 @@
     ],
     "vim.normalModeKeyBindingsNonRecursive": [
         {
-        "before": [ "leader", "<Enter>"],
-        "commands": [":nohl"]
+            "before": [ "leader", "<Enter>"],
+            "commands": [":nohl"]
         },
         {
             "before": [ "leader", "w" ],
-            "commands": [ "workbench.action.files.save" ]
+            "commands": [{ "command": ":wa" }]
+        },
+        {
+            "before": [ "K" ],
+            "after": [ "i", "<cr>", "<esc>" ]
         }
     ],
     "vim.leader": ",",
     "vim.handleKeys": {
+        "<C-t>": false,
+        "<C-q>": true,
         "<C-a>": false,
-        "<C-f>": false
+        "<C-c>": false,
+        "<C-v>": false,
+        "<C-x>": false
     },
+
     "terminal.integrated.fontFamily": "MesloLGM NF",
-    "terminal.integrated.fontSize": 12,
-    "editor.fontFamily": "MesloLGM NF",
-    "workbench.editor.enablePreview": false
+    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.shell.windows": "C:\\Users\\${env:USERNAME}\\scoop\\apps\\git\\current\\bin\\bash.exe",
+
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "terminal.external.windowsExec": "",
+
+    "files.associations": {
+        "*jenkinsfile": "groovy"
+    }
 }
