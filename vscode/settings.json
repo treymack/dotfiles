@@ -1,5 +1,5 @@
 {
-    "editor.fontFamily": "MesloLGM NF",
+    "editor.fontFamily": "MesloLGM NF,Consolas,Menlo",
     "editor.formatOnSave": true,
     "editor.formatOnSaveMode": "modifications",
     "editor.formatOnPaste": true,
@@ -44,9 +44,8 @@
         "<C-v>": false,
         "<C-x>": false
     },
-
-    "terminal.integrated.fontFamily": "MesloLGM NF",
-    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.fonteditor.fontFamily": "MesloLGM NF,Consolas,Menlo",
+    "terminal.integrated.fonteditor.fontSize": 14,
     "terminal.integrated.shell.windows": "C:\\Users\\${env:USERNAME}\\scoop\\apps\\git\\current\\bin\\bash.exe",
 
     "workbench.editor.enablePreview": false,
