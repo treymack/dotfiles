@@ -3,5 +3,17 @@
     {
         "key": "ctrl+shift+t",
         "command": "-workbench.action.reopenClosedEditor"
+    },
+    {
+        "key": "ctrl+alt+n",
+        "command": "explorer.newFile"
+    },
+    {
+        "key": "ctrl+alt+f",
+        "command": "explorer.newFolder"
+    },
+    {
+        "key": "ctrl+shift+t",
+        "command": "workbench.action.tasks.test"
     }
 ]

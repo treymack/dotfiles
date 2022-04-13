@@ -1,10 +1,9 @@
 {
-    "editor.fontFamily": "MesloLGM NF,Consolas,Menlo,monospace",
+    "editor.fontFamily": "MesloLGM Nerd Font,Consolas,Menlo,monospace",
+    "editor.fontSize": 14,
     "editor.formatOnSave": true,
-    "editor.formatOnSaveMode": "modifications",
     "editor.formatOnPaste": true,
     "editor.minimap.enabled": false,
-
     "vim.easymotion": true,
     "vim.incsearch": true,
     "vim.useSystemClipboard": true,
@@ -13,26 +12,54 @@
     "vim.highlightedyank.enable": true,
     "vim.insertModeKeyBindings": [
         {
-            "before": [ "j", "k" ],
-            "after": [ "<Esc>" ]
+            "before": [
+                "j",
+                "k"
+            ],
+            "after": [
+                "<Esc>"
+            ]
         },
         {
-            "before": [ "k", "j" ],
-            "after": [ "<Esc>" ]
+            "before": [
+                "k",
+                "j"
+            ],
+            "after": [
+                "<Esc>"
+            ]
         }
     ],
     "vim.normalModeKeyBindingsNonRecursive": [
         {
-            "before": [ "leader", "<Enter>"],
-            "commands": [":nohl"]
+            "before": [
+                "leader",
+                "<Enter>"
+            ],
+            "commands": [
+                ":nohl"
+            ]
         },
         {
-            "before": [ "leader", "w" ],
-            "commands": [{ "command": ":wa" }]
+            "before": [
+                "leader",
+                "w"
+            ],
+            "commands": [
+                {
+                    "command": ":wa"
+                }
+            ]
         },
         {
-            "before": [ "K" ],
-            "after": [ "i", "<cr>", "<esc>" ]
+            "before": [
+                "K"
+            ],
+            "after": [
+                "i",
+                "<cr>",
+                "<esc>"
+            ]
         }
     ],
     "vim.leader": ",",
@@ -44,15 +71,29 @@
         "<C-v>": false,
         "<C-x>": false
     },
-    "terminal.integrated.fonteditor.fontFamily": "MesloLGM NF,Consolas,Menlo,monospace",
-    "terminal.integrated.fonteditor.fontSize": 14,
-    "terminal.integrated.shell.windows": "C:\\Users\\${env:USERNAME}\\scoop\\apps\\git\\current\\bin\\bash.exe",
-
+    "terminal.integrated.fontFamily": "MesloLGM Nerd Font,Consolas,Menlo,monospace",
+    "terminal.integrated.fontSize": 14,
     "workbench.editor.enablePreview": false,
     "workbench.editor.enablePreviewFromQuickOpen": false,
     "terminal.external.windowsExec": "",
-
     "files.associations": {
         "*jenkinsfile": "groovy"
     },
+    "explorer.confirmDelete": false,
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "explorer.confirmDragAndDrop": false,
+    "gitlens.codeLens.enabled": false,
+    "editor.codeLens": false,
+    "hediet.vscode-drawio.theme": "min",
+    "workbench.colorTheme": "Default Light+",
+    "gitlens.views.commits.files.layout": "tree",
+    "editor.formatOnType": true,
+    "files.exclude": {
+        "**/.git": false
+    },
+    "debug.onTaskErrors": "showErrors",
+    "git.closeDiffOnOperation": true,
+    "workbench.startupEditor": "none",
 }
