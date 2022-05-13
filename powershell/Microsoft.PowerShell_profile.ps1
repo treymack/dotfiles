@@ -4,26 +4,22 @@ Set-PSReadlineKeyHandler "Shift+SpaceBar" -ScriptBlock {
 }
 
 Set-PSReadlineKeyHandler -Key ctrl+d -Function ViExit
+Set-PSReadlineKeyHandler -Key ctrl+l -Function ClearScreen
+
+Import-Module posh-git
+Import-Module oh-my-posh
+Set-PoshPrompt -Theme trey
+
+# k8s
+Set-Alias k kubectl
+Set-Alias mk minikube
 
 function which($cmd) {
     Get-Command $cmd | Select-Object -ExpandProperty path
 }
 
-# FUNctions!
-function mdcd {
-    param ($path)
-    
-    mkdir $path
-    Set-Location $path
-}
-
 function shrug { Write-Output '¯\_(ツ)_/¯'; }
 function fliptable { Write-Output '（╯°□°）╯ ┻━┻'; } # Flip a table. Example usage: fsck -y /dev/sdb1 || fliptable
-
-Import-Module oh-my-posh
-Set-PoshPrompt -Theme agnoster
-
-function gitbash { & 'C:\Program Files\Git\bin\bash.exe' }
 
 function touch
 {
