@@ -1,99 +1,146 @@
 {
-    "editor.fontFamily": "MesloLGM Nerd Font,Consolas,Menlo,monospace",
-    "editor.fontSize": 14,
-    "editor.formatOnSave": true,
-    "editor.formatOnPaste": true,
-    "editor.minimap.enabled": false,
-    "vim.easymotion": true,
-    "vim.incsearch": true,
-    "vim.useSystemClipboard": true,
-    "vim.hlsearch": true,
-    "vim.disableExtension": false,
-    "vim.highlightedyank.enable": true,
-    "vim.insertModeKeyBindings": [
+  // "editor.fontFamily": "MesloLGM Nerd Font,Consolas,Menlo,monospace",
+  "editor.fontFamily": "Fira Code",
+  "editor.fontLigatures": true,
+  // "editor.fontSize": 14,
+  "editor.fontWeight": "500",
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "vim.easymotion": true,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.hlsearch": true,
+  "vim.disableExtension": false,
+  "vim.highlightedyank.enable": true,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "k"],
+      "after": ["<Esc>"]
+    },
+    {
+      "before": ["k", "j"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["leader", "<Enter>"],
+      "commands": [":nohl"]
+    },
+    {
+      "before": ["leader", "w"],
+      "commands": [
         {
-            "before": [
-                "j",
-                "k"
-            ],
-            "after": [
-                "<Esc>"
-            ]
-        },
-        {
-            "before": [
-                "k",
-                "j"
-            ],
-            "after": [
-                "<Esc>"
-            ]
+          "command": ":wa"
         }
-    ],
-    "vim.normalModeKeyBindingsNonRecursive": [
-        {
-            "before": [
-                "leader",
-                "<Enter>"
-            ],
-            "commands": [
-                ":nohl"
-            ]
-        },
-        {
-            "before": [
-                "leader",
-                "w"
-            ],
-            "commands": [
-                {
-                    "command": ":wa"
-                }
-            ]
-        },
-        {
-            "before": [
-                "K"
-            ],
-            "after": [
-                "i",
-                "<cr>",
-                "<esc>"
-            ]
-        }
-    ],
-    "vim.leader": ",",
-    "vim.handleKeys": {
-        "<C-t>": false,
-        "<C-q>": true,
-        "<C-a>": false,
-        "<C-c>": false,
-        "<C-v>": false,
-        "<C-x>": false
+      ]
     },
-    "terminal.integrated.fontFamily": "MesloLGM Nerd Font,Consolas,Menlo,monospace",
-    "terminal.integrated.fontSize": 14,
-    "workbench.editor.enablePreview": false,
-    "workbench.editor.enablePreviewFromQuickOpen": false,
-    "terminal.external.windowsExec": "",
-    "files.associations": {
-        "*jenkinsfile": "groovy"
+    {
+      "before": ["K"],
+      "after": ["i", "<cr>", "<esc>"]
     },
-    "explorer.confirmDelete": false,
-    "terminal.integrated.defaultProfile.windows": "PowerShell",
-    "git.autofetch": true,
-    "git.confirmSync": false,
-    "explorer.confirmDragAndDrop": false,
-    "gitlens.codeLens.enabled": false,
-    "editor.codeLens": false,
-    "hediet.vscode-drawio.theme": "min",
-    "workbench.colorTheme": "Default Light+",
-    "gitlens.views.commits.files.layout": "tree",
-    "editor.formatOnType": true,
-    "files.exclude": {
-        "**/.git": false
+    {
+      "before": ["j"],
+      "after": ["g", "j"]
     },
-    "debug.onTaskErrors": "showErrors",
-    "git.closeDiffOnOperation": true,
-    "workbench.startupEditor": "none",
+    {
+      "before": ["k"],
+      "after": ["g", "k"]
+    },
+    {
+      "before": ["0"],
+      "after": ["g", "0"]
+    },
+    {
+      "before": ["$"],
+      "after": ["g", "$"]
+    }
+  ],
+  "vim.leader": ",",
+  "vim.handleKeys": {
+    "<C-t>": false,
+    "<C-q>": true,
+    "<C-a>": false,
+    "<C-c>": false,
+    "<C-v>": false,
+    "<C-x>": false
+  },
+  // "terminal.integrated.fontFamily": "Fira Code",
+  "terminal.integrated.fontFamily": "MesloLGM Nerd Font,Consolas,Menlo,monospace",
+  "terminal.integrated.fontSize": 14,
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "terminal.external.windowsExec": "",
+  "files.associations": {
+    "*jenkinsfile": "groovy",
+    "*.snap": "markdown"
+  },
+  "explorer.confirmDelete": false,
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "explorer.confirmDragAndDrop": false,
+  "hediet.vscode-drawio.theme": "min",
+  "gitlens.views.commits.files.layout": "tree",
+  "editor.formatOnType": true,
+  "files.exclude": {
+    "**/.git": false
+  },
+  "debug.onTaskErrors": "showErrors",
+  "git.closeDiffOnOperation": true,
+  "workbench.startupEditor": "none",
+  "redhat.telemetry.enabled": false,
+  "azureTerraform.terminal": "integrated",
+  "vs-kubernetes": {
+    "vscode-kubernetes.helm-path.windows": "C:\\Users\\trey.mack\\.vs-kubernetes\\tools\\helm\\windows-amd64\\helm.exe"
+  },
+  "editor.wordWrap": "off",
+  "git.branchProtection": ["main", "master"],
+  "dotnet-test-explorer.autoExpandTree": true,
+  "dotnet-test-explorer.enableTelemetry": false,
+  "diffEditor.codeLens": true,
+  "files.trimTrailingWhitespace": true,
+  "plantuml.server": "http://localhost:8066",
+  "telemetry.telemetryLevel": "error",
+  "git.mergeEditor": false,
+  "editor.rulers": [80],
+  "playwright.reuseBrowser": false,
+  "editor.minimap.enabled": false,
+  "json.schemas": [
+    {
+      "fileMatch": ["*.avsc"],
+      "url": "https://json.schemastore.org/avro-avsc.json"
+    }
+  ],
+  "coverage-gutters.ignoredPathGlobs": "**/{node_modules,venv,.venv,vendor,bin,obj}/**",
+  "coverage-gutters.coverageFileNames": ["lcov.info"],
+  "coverage-gutters.coverageBaseDir": "**/*[Test|Tests]",
+  "terminal.integrated.tabs.hideCondition": "never",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "azureFunctions.showProjectWarning": false,
+  "azure.resourceFilter": [
+    "c2847942-a84b-499f-89de-c74b0020e8c5/9f421472-39f3-4957-a2af-1f6fc6d9e68d",
+    "eb582e5f-e4be-4986-865b-688a418ccee8/ed55a832-3596-4570-8a86-2cc344df32be",
+    "953b0f83-1ce6-45c3-82c9-1d847e372339/b473e473-80a5-47f2-afbd-ba6643fe9f64",
+    "953b0f83-1ce6-45c3-82c9-1d847e372339/d6633c0f-191f-488a-853b-4e24d211f47c",
+    "953b0f83-1ce6-45c3-82c9-1d847e372339/21bb1509-ce56-4b55-8601-9cd75b8da83b"
+  ],
+  "asa.enableFeedbackPrompt": false,
+  "azureResourceGroups.groupBy": "resourceGroup",
+  "dotnet-test-explorer.treeMode": "flat",
+  "task.autoDetect": "off",
+  "azureResourceManagerTools.parameterFiles": {
+    "c:\\users\\trey.mack\\source\\repos\\temp\\arm-vscode-spike\\azuredeploy.json": "azuredeploy.parameters.json",
+    "c:\\users\\trey.mack\\source\\repos\\temp\\arm-vscode-spike\\portal\\template.json": "parameters.json"
+  },
+  "java.autobuild.enabled": false,
+  "powershell.integratedConsole.focusConsoleOnExecute": false,
+  "workbench.editor.revealIfOpen": true,
+  "git.pruneOnFetch": true,
+  "cSpell.userWords": ["azuremonitor"],
+  "[csharp]": {
+    "editor.defaultFormatter": "csharpier.csharpier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
