@@ -41,3 +41,6 @@
     cmd = "~/scoop/apps/winmerge/current/WinMergeU.exe" -u -e $LOCAL $REMOTE
 [help]
     autocorrect = 1
+[user]
+	email = tmack10@gmail.com
+	name = Trey Mack
