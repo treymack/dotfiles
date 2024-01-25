@@ -1,12 +1,10 @@
 {
   // "editor.fontFamily": "MesloLGM Nerd Font,Consolas,Menlo,monospace",
-  "editor.fontFamily": "Fira Code",
+  "editor.fontFamily": "FiraCode NF",
   "editor.fontLigatures": true,
   // "editor.fontSize": 14,
   "editor.fontWeight": "500",
-  "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
-  "editor.renderControlCharacters": false,
   "vim.easymotion": true,
   "vim.incsearch": true,
   "vim.useSystemClipboard": true,
@@ -55,6 +53,10 @@
     {
       "before": ["$"],
       "after": ["g", "$"]
+    },
+    {
+      "before": ["<Space>"],
+      "commands": ["editor.toggleFold"]
     }
   ],
   "vim.leader": ",",
@@ -92,19 +94,21 @@
   "redhat.telemetry.enabled": false,
   "azureTerraform.terminal": "integrated",
   "vs-kubernetes": {
-    "vscode-kubernetes.helm-path.windows": "C:\\Users\\trey.mack\\.vs-kubernetes\\tools\\helm\\windows-amd64\\helm.exe"
+    "vscode-kubernetes.helm-path.windows": "C:\\Users\\trey.mack\\.vs-kubernetes\\tools\\helm\\windows-amd64\\helm.exe",
+    "vscode-kubernetes.minikube-path.windows": "C:\\Users\\trey.mack\\.vs-kubernetes\\tools\\minikube\\windows-amd64\\minikube.exe",
+    "vs-kubernetes.minikube-show-information-expiration": "2024-01-14T19:19:39.226Z",
+    "vs-kubernetes.crd-code-completion": "enabled"
   },
   "editor.wordWrap": "off",
   "git.branchProtection": ["main", "master"],
   "dotnet-test-explorer.autoExpandTree": true,
   "dotnet-test-explorer.enableTelemetry": false,
   "diffEditor.codeLens": true,
-  "files.trimTrailingWhitespace": true,
   "plantuml.server": "http://localhost:8066",
   "telemetry.telemetryLevel": "error",
   "git.mergeEditor": false,
   "editor.rulers": [80],
-  "playwright.reuseBrowser": false,
+  "playwright.reuseBrowser": true,
   "editor.minimap.enabled": false,
   "json.schemas": [
     {
@@ -112,23 +116,11 @@
       "url": "https://json.schemastore.org/avro-avsc.json"
     }
   ],
-  "coverage-gutters.ignoredPathGlobs": "**/{node_modules,venv,.venv,vendor,bin,obj}/**",
-  "coverage-gutters.coverageFileNames": ["lcov.info"],
-  "coverage-gutters.coverageBaseDir": "**/*[Test|Tests]",
   "terminal.integrated.tabs.hideCondition": "never",
-  "diffEditor.ignoreTrimWhitespace": false,
   "azureFunctions.showProjectWarning": false,
-  "azure.resourceFilter": [
-    "c2847942-a84b-499f-89de-c74b0020e8c5/9f421472-39f3-4957-a2af-1f6fc6d9e68d",
-    "eb582e5f-e4be-4986-865b-688a418ccee8/ed55a832-3596-4570-8a86-2cc344df32be",
-    "953b0f83-1ce6-45c3-82c9-1d847e372339/b473e473-80a5-47f2-afbd-ba6643fe9f64",
-    "953b0f83-1ce6-45c3-82c9-1d847e372339/d6633c0f-191f-488a-853b-4e24d211f47c",
-    "953b0f83-1ce6-45c3-82c9-1d847e372339/21bb1509-ce56-4b55-8601-9cd75b8da83b"
-  ],
   "asa.enableFeedbackPrompt": false,
   "azureResourceGroups.groupBy": "resourceGroup",
   "dotnet-test-explorer.treeMode": "flat",
-  "task.autoDetect": "off",
   "azureResourceManagerTools.parameterFiles": {
     "c:\\users\\trey.mack\\source\\repos\\temp\\arm-vscode-spike\\azuredeploy.json": "azuredeploy.parameters.json",
     "c:\\users\\trey.mack\\source\\repos\\temp\\arm-vscode-spike\\portal\\template.json": "parameters.json"
@@ -143,5 +135,86 @@
   },
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "editor.formatOnSaveMode": "modificationsIfAvailable",
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "l13Diff.confirmCopy": false,
+  "l13Diff.confirmDelete": false,
+  "editor.renderWhitespace": "boundary",
+  "[markdown]": {
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+  },
+  "task.autoDetect": "off",
+  "rust-analyzer.check.extraArgs": ["--target-dir", "/tmp/rust-analyzer-check"],
+  "cmake.configureOnOpen": false,
+  "playwright.showTrace": false,
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "omnisharp.enableRoslynAnalyzers": true,
+  "mssql.connections": [
+    {
+      "server": ".",
+      "database": "",
+      "authenticationType": "SqlLogin",
+      "user": "sa",
+      "password": "",
+      "emptyPasswordInput": false,
+      "savePassword": true,
+      "profileName": "local docker image",
+      "encrypt": "Mandatory",
+      "trustServerCertificate": true,
+      "connectTimeout": 15,
+      "commandTimeout": 30,
+      "applicationName": "vscode-mssql"
+    }
+  ],
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.renderControlCharacters": false,
+  "sonarlint.connectedMode.connections.sonarqube": [
+    {
+      "serverUrl": "https://sonarqube.cchaxcess.com",
+      "connectionId": "https-sonarqube-cchaxcess-com"
+    }
+  ],
+  "powershell.pester.codeLens": false,
+  "openapi.platformUrl": "https://platform.42crunch.com",
+  "openapi.platformServices": "",
+  "openapi.platformScandManager": {
+    "url": "",
+    "auth": "none",
+    "header": {
+      "name": "",
+      "value": ""
+    }
+  },
+  "openapi.docker": {
+    "replaceLocalhost": true,
+    "useHostNetwork": true
+  },
+  "openapi.platformConformanceScanRuntime": "docker",
+  "openapi.platformConformanceScanImage": "42crunch/scand-agent:v2.0.0",
+  "azureApiManagement.advancedCreation": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.colorTheme": "Default Dark+",
+  "csharp.suppressBuildAssetsNotification": true,
+  "sqlite.databaseExtensions": [
+    "db",
+    "db3",
+    "sdb",
+    "s3db",
+    "sqlite",
+    "sqlite3",
+    "crf"
+  ],
+  "sqlite.recordsPerPage": 15,
+  "workbench.editor.pinnedTabSizing": "compact",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "window.title": "${dirty}${rootName}${separator}${activeEditorShort}${separator}${profileName}${separator}${appName}"
 }
