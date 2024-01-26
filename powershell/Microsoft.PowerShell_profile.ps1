@@ -7,7 +7,8 @@ Set-PSReadlineKeyHandler -Key ctrl+d -Function ViExit
 Set-PSReadlineKeyHandler -Key ctrl+l -Function ClearScreen
 
 Import-Module posh-git
-oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\stelbent-compact.minimal.omp.json" | Invoke-Expression
+# oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\stelbent-compact.minimal.omp.json" | Invoke-Expression
+oh-my-posh init pwsh --config "$env:HOMEDRIVE\$env:HOMEPATH\dotfiles\oh-my-posh\custom.omp.json" | Invoke-Expression
 function Set-EnvVar {
     # $env:POSH_AZ_SUBSCRIPTION_NAME = Get-AzContext | Select-Object -ExpandProperty "Subscription" | Select-Object -ExpandProperty "Name"
 }
