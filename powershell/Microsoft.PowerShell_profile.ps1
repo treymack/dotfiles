@@ -6,6 +6,9 @@ Set-PSReadlineKeyHandler "Shift+SpaceBar" -ScriptBlock {
 Set-PSReadlineKeyHandler -Key ctrl+d -Function ViExit
 Set-PSReadlineKeyHandler -Key ctrl+l -Function ClearScreen
 
+# So karma can find Chrome (installed by scoop)
+$env:CHROME_BIN="C:\Users\tmack\scoop\apps\googlechrome\current\chrome.exe"
+
 Import-Module posh-git
 # oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\stelbent-compact.minimal.omp.json" | Invoke-Expression
 oh-my-posh init pwsh --config "$env:HOMEDRIVE\$env:HOMEPATH\dotfiles\oh-my-posh\custom.omp.json" | Invoke-Expression

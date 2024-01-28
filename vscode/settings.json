@@ -69,7 +69,7 @@
     "<C-x>": false
   },
   // "terminal.integrated.fontFamily": "Fira Code",
-  "terminal.integrated.fontFamily": "MesloLGM Nerd Font,Consolas,Menlo,monospace",
+  "terminal.integrated.fontFamily": "FiraCode Nerd Font,MesloLGM Nerd Font,Consolas,Menlo,monospace",
   "terminal.integrated.fontSize": 14,
   "workbench.editor.enablePreview": false,
   "workbench.editor.enablePreviewFromQuickOpen": false,
@@ -93,12 +93,6 @@
   "workbench.startupEditor": "none",
   "redhat.telemetry.enabled": false,
   "azureTerraform.terminal": "integrated",
-  "vs-kubernetes": {
-    "vscode-kubernetes.helm-path.windows": "C:\\Users\\trey.mack\\.vs-kubernetes\\tools\\helm\\windows-amd64\\helm.exe",
-    "vscode-kubernetes.minikube-path.windows": "C:\\Users\\trey.mack\\.vs-kubernetes\\tools\\minikube\\windows-amd64\\minikube.exe",
-    "vs-kubernetes.minikube-show-information-expiration": "2024-01-14T19:19:39.226Z",
-    "vs-kubernetes.crd-code-completion": "enabled"
-  },
   "editor.wordWrap": "off",
   "git.branchProtection": ["main", "master"],
   "dotnet-test-explorer.autoExpandTree": true,
