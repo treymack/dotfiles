@@ -36,6 +36,9 @@
           "style": "powerline",
           "powerline_symbol": "\ue0b4",
           "template": "<p:symbol-color>\ufd31</> {{.Context}}{{if .Namespace}} \uf061 {{.Namespace}}{{end}}",
+          "properties": {
+              "parse_kubeconfig": true
+          },
           "type": "kubectl"
         },
         {

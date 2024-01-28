@@ -210,5 +210,6 @@
   "sqlite.recordsPerPage": 15,
   "workbench.editor.pinnedTabSizing": "compact",
   "diffEditor.ignoreTrimWhitespace": false,
-  "window.title": "${dirty}${rootName}${separator}${activeEditorShort}${separator}${profileName}${separator}${appName}"
+  "window.title": "${dirty}${rootName}${separator}${activeEditorShort}${separator}${profileName}${separator}${appName}",
+  "window.zoomLevel": 1
 }
