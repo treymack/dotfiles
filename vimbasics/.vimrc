@@ -1,3 +1,5 @@
+let mapleader = ","
+
 " Fast saving
 nmap <leader>w :wa!<cr>
 
