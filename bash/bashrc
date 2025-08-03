@@ -1,0 +1,8 @@
+echo "Adding custom bashrc settings from dotfiles..."
+
+alias k="kubectl"
+alias d="docker"
+alias gs="git status"
+
+alias omp="~/.local/bin/oh-my-posh"
+eval "$(omp init bash --config ~/dotfiles/oh-my-posh/custom.omp.json)"

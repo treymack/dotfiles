@@ -1,7 +1,5 @@
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
-  "version": 2,
-  "console_title_template": "{{ if or .Root .Segments.Git.RepoName }}[ {{ if .Root }}Admin{{ end }}{{ if and .Root .Segments.Git.RepoName }}@{{ end }}{{ if .Segments.Git.RepoName }}{{ .Segments.Git.RepoName }}{{ end }} ]{{ end }} {{ .Folder }}",
   "palette": {
     "background-color": "transparent",
     "cloud-text-amazon": "#4285F4",
@@ -14,178 +12,204 @@
     "symbol-color": "#ffffff",
     "timer-text": "#dd0033"
   },
+  "console_title_template": "{{ if or .Root .Segments.Git.RepoName }}[ {{ if .Root }}Admin{{ end }}{{ if and .Root .Segments.Git.RepoName }}@{{ end }}{{ if .Segments.Git.RepoName }}{{ .Segments.Git.RepoName }}{{ end }} ]{{ end }} {{ .Folder }}",
   "blocks": [
     {
+      "type": "prompt",
       "alignment": "left",
-      "newline": false,
       "segments": [
         {
-          "background": "p:background-color",
-          "foreground": "p:timer-text",
           "properties": {
+            "cache_duration": "none",
             "time_format": "15:04:05"
           },
-          "style": "powerline",
-          "powerline_symbol": "",
           "template": " <p:symbol-color>\uf65e</> {{ dateInZone .Format .CurrentDate \"UTC\" }} ",
-          "type": "time"
+          "foreground": "p:timer-text",
+          "background": "p:background-color",
+          "type": "time",
+          "style": "powerline"
         },
         {
-          "background": "p:background-color",
-          "foreground": "p:kubernetes-text",
-          "style": "powerline",
-          "powerline_symbol": "\ue0b4",
-          "template": "<p:symbol-color>\ufd31</> {{.Context}}{{if .Namespace}} \uf061 {{.Namespace}}{{end}}",
           "properties": {
-              "parse_kubeconfig": true
+            "cache_duration": "none",
+            "parse_kubeconfig": true
           },
-          "type": "kubectl"
-        },
-        {
-          "background": "p:background-color",
-          "foreground": "p:cloud-text-amazon",
-          "style": "powerline",
+          "template": "<p:symbol-color>\ufd31</> {{.Context}}{{if .Namespace}} \uf061 {{.Namespace}}{{end}}",
+          "foreground": "p:kubernetes-text",
           "powerline_symbol": "\ue0b4",
-          "template": " <p:symbol-color>\uf270</> {{.Profile}}{{if .Region}} \uf061 {{.Region}}{{end}}",
-          "type": "aws"
+          "background": "p:background-color",
+          "type": "kubectl",
+          "style": "powerline"
         },
         {
-          "background": "p:background-color",
-          "foreground": "p:cloud-text-azure",
           "properties": {
+            "cache_duration": "none"
+          },
+          "template": " <p:symbol-color>\uf270</> {{.Profile}}{{if .Region}} \uf061 {{.Region}}{{end}}",
+          "foreground": "p:cloud-text-amazon",
+          "powerline_symbol": "\ue0b4",
+          "background": "p:background-color",
+          "type": "aws",
+          "style": "powerline"
+        },
+        {
+          "properties": {
+            "cache_duration": "none",
             "source": "cli"
           },
-          "style": "powerline",
-          "powerline_symbol": "\ue0b4",
           "template": " <p:symbol-color>\ufd03</> {{ .Name }}",
-          "type": "az"
+          "foreground": "p:cloud-text-azure",
+          "powerline_symbol": "\ue0b4",
+          "background": "p:background-color",
+          "type": "az",
+          "style": "powerline"
         },
         {
-          "background": "p:background-color",
-          "foreground": "p:cloud-text-azure",
           "properties": {
+            "cache_duration": "none",
             "source": "pwsh"
           },
-          "style": "powerline",
-          "powerline_symbol": "\ue0b4",
           "template": " <p:symbol-color>\ufd03</> (PS) {{ .Name }}",
-          "type": "az"
-        },
-        {
-          "background": "p:background-color",
-          "foreground": "p:cloud-text-gcp",
-          "style": "powerline",
+          "foreground": "p:cloud-text-azure",
           "powerline_symbol": "\ue0b4",
-          "template": " <p:symbol-color>\ue7b2</> {{ .Project }}",
-          "type": "gcp"
+          "background": "p:background-color",
+          "type": "az",
+          "style": "powerline"
         },
         {
-          "background": "p:background-color",
-          "foreground": "p:git-text",
-          "style": "powerline",
-          "powerline_symbol": "\ue0b4",
-          "template": " <p:symbol-color>\uF408</> {{ .RepoName }}",
-          "type": "git"
-        },
-        {
-          "background": "p:background-color",
-          "foreground": "p:timer-text",
           "properties": {
+            "cache_duration": "none"
+          },
+          "template": " <p:symbol-color>\ue7b2</> {{ .Project }}",
+          "foreground": "p:cloud-text-gcp",
+          "powerline_symbol": "\ue0b4",
+          "background": "p:background-color",
+          "type": "gcp",
+          "style": "powerline"
+        },
+        {
+          "properties": {
+            "cache_duration": "none"
+          },
+          "template": " <p:symbol-color>\uf408</> {{ .RepoName }}",
+          "foreground": "p:git-text",
+          "powerline_symbol": "\ue0b4",
+          "background": "p:background-color",
+          "type": "git",
+          "style": "powerline"
+        },
+        {
+          "properties": {
+            "cache_duration": "none",
             "style": "austin",
             "threshold": 1
           },
-          "style": "powerline",
-          "powerline_symbol": "\ue0b4",
           "template": " <p:symbol-color>\ufbab</> {{ .FormattedMs }}",
-          "type": "executiontime"
-        },
-        {
-          "background": "p:background-color",
-          "foreground": "p:symbol-color",
-          "properties": {
-            "always_enabled": true
-          },
-          "style": "powerline",
+          "foreground": "p:timer-text",
           "powerline_symbol": "\ue0b4",
-          "template": "{{ if eq .Code 0 }} \uf7d0 {{ end }}",
-          "type": "exit"
+          "background": "p:background-color",
+          "type": "executiontime",
+          "style": "powerline"
         },
         {
-          "background": "p:error-background",
-          "foreground": "p:error-text",
+          "properties": {
+            "always_enabled": true,
+            "cache_duration": "none"
+          },
+          "template": "{{ if eq .Code 0 }} \uf7d0 {{ end }}",
+          "foreground": "p:symbol-color",
+          "powerline_symbol": "\ue0b4",
+          "background": "p:background-color",
+          "type": "exit",
+          "style": "powerline"
+        },
+        {
+          "properties": {
+            "cache_duration": "none"
+          },
           "leading_diamond": " \ue0c5",
           "trailing_diamond": "\ue0c4",
-          "style": "diamond",
           "template": "{{ if ne .Code 0 }} \uf00d {{ .Code }}{{ if (ne .Meaning (toString .Code)) }} - {{ .Meaning }}{{else}}{{ end }} {{ end }}",
-          "type": "exit"
+          "foreground": "p:error-text",
+          "background": "p:error-background",
+          "type": "exit",
+          "style": "diamond"
         }
-      ],
-      "type": "prompt"
+      ]
     },
     {
+      "type": "prompt",
       "alignment": "left",
-      "newline": true,
       "segments": [
         {
-          "background": "p:background-color",
-          "foreground": "p:timer-text",
           "properties": {
+            "cache_duration": "none",
             "time_format": "15:04:05"
           },
-          "style": "powerline",
-          "powerline_symbol": "",
           "template": " <p:symbol-color>\uf49b</> {{ .CurrentDate | date .Format }} ",
-          "type": "time"
+          "foreground": "p:timer-text",
+          "background": "p:background-color",
+          "type": "time",
+          "style": "powerline"
         },
         {
-          "background": "p:background-color",
-          "foreground": "p:symbol-color",
           "properties": {
+            "cache_duration": "none",
             "folder_separator_icon": "/",
             "style": "folder"
           },
-          "style": "powerline",
-          "powerline_symbol": "\ue0b4",
           "template": "\ue5ff {{ path .Path .Location }} ",
-          "type": "path"
+          "foreground": "p:symbol-color",
+          "powerline_symbol": "\ue0b4",
+          "background": "p:background-color",
+          "type": "path",
+          "style": "powerline"
         },
         {
-          "background": "p:background-color",
-          "foreground": "p:git-text",
           "properties": {
+            "cache_duration": "none",
             "fetch_stash_count": true,
             "fetch_status": true
           },
-          "style": "powerline",
-          "powerline_symbol": "\ue0b4",
           "template": "{{ .HEAD }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if gt .StashCount 0 }} \uf692 {{ .StashCount }}{{ end }} ",
-          "type": "git"
+          "foreground": "p:git-text",
+          "powerline_symbol": "\ue0b4",
+          "background": "p:background-color",
+          "type": "git",
+          "style": "powerline"
         }
       ],
-      "type": "prompt"
+      "newline": true
     },
     {
+      "type": "prompt",
       "alignment": "left",
-      "newline": true,
       "segments": [
         {
-          "background": "p:error-background",
-          "foreground": "p:backgrond-color",
-          "style": "diamond",
+          "properties": {
+            "cache_duration": "none"
+          },
           "leading_diamond": "\ue0c7",
           "trailing_diamond": "\ue0c6",
           "template": " \uf0e7 ",
-          "type": "root"
+          "foreground": "p:backgrond-color",
+          "background": "p:error-background",
+          "type": "root",
+          "style": "diamond"
         },
         {
-          "background": "p:background-color",
-          "foreground": "p:git-text",
-          "style": "plain",
+          "properties": {
+            "cache_duration": "none"
+          },
           "template": "{{ if .Root }}{{ else }}<p:symbol-color> > </>{{ end }}",
-          "type": "text"
+          "foreground": "p:git-text",
+          "background": "p:background-color",
+          "type": "text",
+          "style": "plain"
         }
       ],
-      "type": "prompt"
+      "newline": true
     }
-  ]
+  ],
+  "version": 3
 }
