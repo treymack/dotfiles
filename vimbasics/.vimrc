@@ -1,3 +1,5 @@
+let mapleader = ","
+
 " Fast saving
 nmap <leader>w :wa!<cr>
 
@@ -30,3 +32,24 @@ map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
+
+" insert date with F3
+nmap <F3> i<C-R>=strftime("%Y-%m-%d")<CR><Esc>
+imap <F3> <C-R>=strftime("%Y-%m-%d")<CR>
+nmap <Leader><F3> i<C-R>=strftime("%Y-%m-%d %a %I:%M %p")<CR><Esc>
+imap <Leader><F3> <C-R>=strftime("%Y-%m-%d %a %I:%M %p")<CR>
+
+syntax enable
+
+" folding
+set foldlevelstart=99
+set foldmethod=indent
+nnoremap <Space> za
+vnoremap <Space> za
+
+set number
+
+" editing / sourcing _vimrc
+nnoremap <Leader>ve :vsplit $MYVIMRC<cr>
+nnoremap <Leader>vs :so $MYVIMRC<cr>
+
